@@ -24,3 +24,12 @@
   .menu-open .menu-toggle span:last-child{transform:translateY(-7px) rotate(-45deg)}
   .menu-toggle:focus-visible{outline:3px solid #45c8ff;outline-offset:4px}
 }
+/* Persistent overlay navigation; the slim information bar scrolls away. */
+.header-shell{position:sticky;top:0;z-index:30;background:rgb(255 255 255 / 96%);backdrop-filter:blur(12px);box-shadow:0 2px 12px rgb(6 45 80 / 8%)}
+.mobile-contact{display:none}
+section[id]{scroll-margin-top:125px}
+@media(max-width:700px){
+  .mobile-contact{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;margin-right:12px;min-height:44px;padding:10px 12px;background:var(--blue);color:#fff;font-size:12px}
+  .header nav{max-height:calc(100dvh - 80px);overflow-y:auto}
+  section[id]{scroll-margin-top:100px}
+}
